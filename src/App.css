@@ -1,0 +1,349 @@
+/*обнулення*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+.App a:focus,
+.App a:active {
+	outline: none;
+}
+
+.App nav,
+.App footer,
+.App header,
+.App aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+.App input,
+.App button,
+.App textarea {
+	font-family: inherit;
+}
+
+.App input::-ms-clear {
+	display: none;
+	bottom: ;
+}
+
+.App button {
+	cursor: pointer;
+}
+
+.for_pagebutton::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+.App a,
+.App a:visited {
+	text-decoration: none;
+}
+
+.App a:hover {
+	text-decoration: none;
+}
+
+.App ul li {
+	list-style: none;
+}
+
+.App img {
+	vertical-align: top;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	
+}
+
+/*start code*/
+
+
+.modal {
+  font-size: 12px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	background: #141C24;
+	
+}
+
+.modal .container {
+	width: 485px;
+	margin: 0 auto;
+}
+.modal .header{
+margin-top: 100px;
+text-align: center;
+display: flex;
+justify-content: center
+}
+.modal  h2{
+	position: relative;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 48px;
+	color: #FFFFFF;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal  .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal  .close {
+  cursor: pointer;
+	position: absolute;
+	top: 0;
+	left:-140px;
+	text-decoration: none;
+	color: #FFFFFF;
+	transition: linear all 0.5s;
+
+}
+.modal  .close:hover{
+	color: #FFFFFF88;
+}
+.modal .formReg {
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+	padding: 0 37px;
+}
+
+.modal .formReg input {
+	padding: 25px 24px;
+	width: 100%;
+	margin-top: 30px;
+	background: #FFFFFF;
+	border-radius: 5px;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 24px;
+	color: rgb(0, 0, 0);
+	transition: all linear 0.5s;
+}
+.modal .formReg input:hover{
+	background: #ffffffa9;
+}
+.modal .formReg input::placeholder{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.5);
+}
+.modal .formReg input:nth-child(2){
+	margin-top: 15px;
+}
+
+.modal .formReg .btn {
+	cursor: pointer;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 30px;
+	background: #FFFFFF;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	text-align: center;
+	line-height: 24px;
+	padding-top: 19px;
+	color: #000000;
+	text-decoration: none;
+	clip-path: polygon(91% 0, 100% 33%, 100% 100%, 0 100%, 0 0);
+	transition: linear all 0.4s;
+}
+.modal .formReg .btn:hover {
+	background: #FFFFFF99;
+	text-shadow: 0px 0px 7px white;
+}
+@media(max-width:500px){
+	.modal .container {
+	width: 100%;
+	margin: 0 auto;
+}
+.modal .formReg {
+    padding: 0;
+}
+.modal  .close {
+	left:-30px;
+
+}
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #ffffff;
+	transition: 0.4s linear;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #00C5FF;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #ffffff;
+	transition: 0.4s linear all;
+}
+.bm-cross:hover {
+	color: #FFFFFF88;
+}
+
+.bm-cross-button {
+	right: 30px !important;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.menu_burger .bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+	width: 100% !important;
+	top: 0;
+	left: 0;
+	
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #141C24;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+	width: 100%;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #ffffff;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+.bm-item ul{
+	display: flex;
+	flex-direction: column;
+  
+}
+.bm-item ul li a{
+display: block;
+margin: 0 auto;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 180%;
+color: #FFFFFF;
+text-decoration: none;
+border-bottom: 1px solid transparent;
+padding-bottom: 2px;
+transition: linear all 0.4s; 
+cursor: pointer;
+}
+.bm-item ul li{
+	border-bottom: 1px solid transparent;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	transition: linear all 0.5s;
+	padding: 0 50px; 
+}
+.bm-item ul li:hover {
+	border-bottom: 1px solid #00C5FF;
+	width: 100%;
+}
+.bm-item ul li a:hover{
+	text-shadow: 0px 0px 7px white; 
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width:1199px){
+	body .container {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.bm-burger-button {
+		position: absolute;
+		top: 73px;
+	}
+}
+@media (max-width: 991px){}
+@media (max-width: 767px){}
+@media (max-width: 640px){}
+@media (max-width: 577px){}
+@media (max-width: 500px){}
+@media (max-width: 470px){}
+@media (max-width: 430px){}
+@media (max-width: 400px){}
+@media (max-width: 350px){}
+
